@@ -1,0 +1,64 @@
+# Restaurant Menu Configuration
+
+This file contains customizable settings for your restaurant menu. 
+Update these values to personalize your menu without editing the main code files.
+
+## Restaurant Information
+RESTAURANT_NAME=Bella Vista
+RESTAURANT_TAGLINE=Fine Dining Experience
+RESTAURANT_ADDRESS=123 Fine Dining Street, Gourmet City
+RESTAURANT_PHONE=(555) 123-4567
+
+## Color Scheme (CSS Color Values)
+PRIMARY_COLOR=#1a1a1a
+SECONDARY_COLOR=#8b6914
+ACCENT_COLOR=#d4af37
+BACKGROUND_COLOR=#ffffff
+
+## Typography
+HEADER_FONT=Playfair Display
+BODY_FONT=Inter
+
+## Layout Settings
+MAX_CONTAINER_WIDTH=1200px
+SECTION_SPACING=4rem
+ITEM_SPACING=2rem
+
+## Menu Categories
+CATEGORY_1=Starters
+CATEGORY_2=Main Course
+CATEGORY_3=Desserts
+CATEGORY_4=Drinks
+
+## Image Settings
+DEFAULT_IMAGE_WIDTH=400px
+DEFAULT_IMAGE_HEIGHT=300px
+IMAGE_QUALITY=crop
+
+## Responsive Breakpoints
+MOBILE_BREAKPOINT=480px
+TABLET_BREAKPOINT=768px
+DESKTOP_BREAKPOINT=1024px
+LARGE_DESKTOP_BREAKPOINT=1400px
+
+## Animation Settings
+TRANSITION_SPEED_FAST=0.2s
+TRANSITION_SPEED_MEDIUM=0.3s
+TRANSITION_SPEED_SLOW=0.5s
+
+## Shadow Settings
+LIGHT_SHADOW=0 2px 8px rgba(0, 0, 0, 0.1)
+MEDIUM_SHADOW=0 4px 16px rgba(0, 0, 0, 0.15)
+HEAVY_SHADOW=0 8px 32px rgba(0, 0, 0, 0.2)
+
+## Border Radius
+SMALL_RADIUS=8px
+MEDIUM_RADIUS=12px
+LARGE_RADIUS=16px
+
+## Notes for Customization:
+# - Change RESTAURANT_NAME and RESTAURANT_TAGLINE to match your establishment
+# - Update color values to match your brand colors
+# - Modify breakpoints if you need different responsive behavior
+# - Adjust spacing values to change the overall layout density
+# - Font names should match Google Fonts or system fonts available

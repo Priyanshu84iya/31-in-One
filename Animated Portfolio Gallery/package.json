@@ -1,0 +1,37 @@
+{
+  "name": "animated-portfolio-gallery",
+  "version": "1.0.0",
+  "description": "A stunning, fully responsive portfolio gallery built with pure HTML and CSS",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx live-server --port=3000 --open=/index.html",
+    "dev": "npx live-server --port=3000 --open=/index.html --watch=**/*.css,**/*.html",
+    "build": "echo 'No build process needed - pure HTML/CSS project'",
+    "validate": "npx html-validator-cli --file=index.html"
+  },
+  "keywords": [
+    "portfolio",
+    "gallery",
+    "css",
+    "html",
+    "responsive",
+    "animations",
+    "filter",
+    "grid",
+    "hover-effects",
+    "frontend"
+  ],  "author": "Pry Uchiha",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "html-validator-cli": "^5.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Priyanshu84iya/animated-portfolio-gallery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Priyanshu84iya/animated-portfolio-gallery/issues"
+  },
+  "homepage": "https://github.com/Priyanshu84iya/animated-portfolio-gallery#readme"
+}

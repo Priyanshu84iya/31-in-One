@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Pry Uchiha • Developer 🔥</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Geometric Background -->
+    <div class="bg-container">
+        <div class="geometric-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="neural-network">
+            <div class="node node-1"></div>
+            <div class="node node-2"></div>
+            <div class="node node-3"></div>
+            <div class="node node-4"></div>
+            <div class="node node-5"></div>
+            <div class="connection con-1"></div>
+            <div class="connection con-2"></div>
+            <div class="connection con-3"></div>
+            <div class="connection con-4"></div>
+        </div>
+        <canvas id="starfield"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">Pry Uchiha</span>
+            </div>
+            <div class="nav-menu">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="Game">Games</button>
+                <button class="filter-btn" data-filter="UI/UX">UI/UX</button>
+                <button class="filter-btn" data-filter="Interactive">Interactive</button>
+                <button class="filter-btn" data-filter="Animation">Animations</button>
+            </div>
+            <div class="nav-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="projectCount">31</span>
+                    <span class="stat-label">Projects</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">        <div class="hero-content">
+            <div class="hero-badge">
+                <img src="home.png" alt="Home" class="website-icon">
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Creative</span>
+                <span class="title-line highlight">Developer</span>
+                <span class="title-line">Portfolio</span>
+            </h1>
+            <p class="hero-description">
+                Explore 31 cutting-edge interactive projects showcasing modern web development, 
+                creative animations, and innovative user experiences.
+            </p>
+            <div class="hero-actions">
+                <button class="cta-btn primary" onclick="scrollToProjects()">
+                    <span>Explore Projects</span>
+                    <div class="btn-glow"></div>
+                </button>
+                <button class="cta-btn secondary" onclick="showRandomProject()">
+                    <span>🎲 Random Project</span>
+                </button>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-preview">
+                <div class="code-header">                    <div class="code-dots">
+                        <div class="dot red"></div>
+                        <div class="dot yellow"></div>
+                        <div class="dot green"></div>
+                    </div>
+                    <span class="code-title">script.js</span>
+                </div>
+                <div class="code-content">
+                    <div class="code-line"><span class="keyword">const</span> <span class="variable">projects</span> = <span class="bracket">[</span></div>
+                    <div class="code-line">  <span class="bracket">{</span> <span class="property">title</span>: <span class="string">"Amazing Projects"</span><span class="bracket">,</span></div>
+                    <div class="code-line">    <span class="property">skills</span>: <span class="bracket">[</span><span class="string">"HTML"</span><span class="bracket">,</span> <span class="string">"CSS"</span><span class="bracket">,</span> <span class="string">"JS"</span><span class="bracket">],</span></div>
+                    <div class="code-line">    <span class="property">creativity</span>: <span class="number">100</span> <span class="bracket">}</span></div>
+                    <div class="code-line"><span class="bracket">];</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projectsSection">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid">
+                        <span>⊞</span> Grid
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <span>☰</span> List
+                    </button>
+                </div>
+            </div>
+            
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Project Cards will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-main">
+                <div class="footer-brand">
+                    <h3>Pry Uchiha</h3>
+                    <p>Crafting digital experiences through code</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Projects</h4>
+                        <a href="#games">Games</a>
+                        <a href="#ui">UI/UX</a>
+                        <a href="#interactive">Interactive</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Technologies</h4>
+                        <a href="#html">HTML5</a>
+                        <a href="#css">CSS3</a>
+                        <a href="#javascript">JavaScript</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-watermark">
+                    <p>&copy; 2025 Pry Uchiha • All rights reserved • Made with 💜</p>
+                </div>
+                <div class="footer-github">
+                    <a href="https://github.com/Priyanshu84iya" target="_blank" rel="noopener noreferrer" class="github-link">
+                        <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Enhanced Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-backdrop" id="modalBackdrop"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-info">
+                    <h3 id="modalTitle">Project Title</h3>
+                    <span id="modalType" class="modal-badge">Type</span>
+                </div>
+                <button class="modal-close" id="closeModal">
+                    <span>✕</span>
+                </button>
+            </div>
+            <div class="modal-content">
+                <iframe id="modalFrame" src="" frameborder="0"></iframe>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="openInNewTab()">
+                    <span>🔗</span> Open in New Tab
+                </button>
+                <button class="modal-btn" onclick="showNextProject()">
+                    <span>➡️</span> Next Project
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-text">Loading Portfolio...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

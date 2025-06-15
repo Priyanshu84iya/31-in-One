@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-calendar-day"></i> Daily Planner</h1>
+                <div class="date-display">
+                    <span id="current-date">Friday, June 13, 2025</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard">
+            <!-- Quick Stats Cards -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>12</h3>
+                        <p>Total Tasks</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>8</h3>
+                        <p>Completed</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>4</h3>
+                        <p>Pending</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Time Slots and Tasks -->
+            <section class="schedule-section">
+                <div class="time-slots">
+                    <h2><i class="fas fa-schedule"></i> Schedule</h2>
+                    
+                    <!-- Morning -->
+                    <div class="time-block morning">
+                        <div class="time-header">
+                            <h3><i class="fas fa-sun"></i> Morning</h3>
+                        </div>
+                        
+                        <div class="time-slot">
+                            <div class="time-label">6:00 AM</div>
+                            <div class="task-card">
+                                <div class="checkbox checked"></div>
+                                <div class="task-content">
+                                    <h4>Morning Workout</h4>
+                                    <p>30 minutes cardio and strength training</p>
+                                </div>
+                                <div class="priority high"></div>
+                            </div>
+                        </div>
+
+                        <div class="time-slot">
+                            <div class="time-label">7:00 AM</div>
+                            <div class="task-card">
+                                <div class="checkbox checked"></div>
+                                <div class="task-content">
+                                    <h4>Breakfast & Coffee</h4>
+                                    <p>Healthy breakfast with green tea</p>
+                                </div>
+                                <div class="priority medium"></div>
+                            </div>
+                        </div>
+
+                        <div class="time-slot">
+                            <div class="time-label">8:00 AM</div>
+                            <div class="task-card">
+                                <div class="checkbox"></div>
+                                <div class="task-content">
+                                    <h4>Review Daily Goals</h4>
+                                    <p>Plan and prioritize today's objectives</p>
+                                </div>
+                                <div class="priority high"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Afternoon -->
+                    <div class="time-block afternoon">
+                        <div class="time-header">
+                            <h3><i class="fas fa-cloud-sun"></i> Afternoon</h3>
+                        </div>
+                        
+                        <div class="time-slot">
+                            <div class="time-label">9:00 AM</div>
+                            <div class="task-card">
+                                <div class="checkbox checked"></div>
+                                <div class="task-content">
+                                    <h4>Team Meeting</h4>
+                                    <p>Weekly sprint planning and updates</p>
+                                </div>
+                                <div class="priority high"></div>
+                            </div>
+                        </div>
+
+                        <div class="time-slot">
+                            <div class="time-label">11:00 AM</div>
+                            <div class="task-card">
+                                <div class="checkbox checked"></div>
+                                <div class="task-content">
+                                    <h4>Project Development</h4>
+                                    <p>Work on Dashboard UI components</p>
+                                </div>
+                                <div class="priority high"></div>
+                            </div>
+                        </div>
+
+                        <div class="time-slot">
+                            <div class="time-label">1:00 PM</div>
+                            <div class="task-card">
+                                <div class="checkbox checked"></div>
+                                <div class="task-content">
+                                    <h4>Lunch Break</h4>
+                                    <p>Healthy meal and short walk</p>
+                                </div>
+                                <div class="priority medium"></div>
+                            </div>
+                        </div>
+
+                        <div class="time-slot">
+                            <div class="time-label">2:30 PM</div>
+                            <div class="task-card">
+                                <div class="checkbox"></div>
+                                <div class="task-content">
+                                    <h4>Code Review</h4>
+                                    <p>Review pull requests and provide feedback</p>
+                                </div>
+                                <div class="priority medium"></div>
+                            </div>
+                        </div>
+
+                        <div class="time-slot">
+                            <div class="time-label">4:00 PM</div>
+                            <div class="task-card">
+                                <div class="checkbox"></div>
+                                <div class="task-content">
+                                    <h4>Documentation</h4>
+                                    <p>Update project documentation and README</p>
+                                </div>
+                                <div class="priority low"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Evening -->
+                    <div class="time-block evening">
+                        <div class="time-header">
+                            <h3><i class="fas fa-moon"></i> Evening</h3>
+                        </div>
+                        
+                        <div class="time-slot">
+                            <div class="time-label">6:00 PM</div>
+                            <div class="task-card">
+                                <div class="checkbox checked"></div>
+                                <div class="task-content">
+                                    <h4>Personal Project</h4>
+                                    <p>Work on side project development</p>
+                                </div>
+                                <div class="priority medium"></div>
+                            </div>
+                        </div>
+
+                        <div class="time-slot">
+                            <div class="time-label">7:30 PM</div>
+                            <div class="task-card">
+                                <div class="checkbox checked"></div>
+                                <div class="task-content">
+                                    <h4>Dinner</h4>
+                                    <p>Family dinner and relaxation time</p>
+                                </div>
+                                <div class="priority medium"></div>
+                            </div>
+                        </div>
+
+                        <div class="time-slot">
+                            <div class="time-label">8:30 PM</div>
+                            <div class="task-card">
+                                <div class="checkbox"></div>
+                                <div class="task-content">
+                                    <h4>Reading</h4>
+                                    <p>Read 30 pages of current book</p>
+                                </div>
+                                <div class="priority low"></div>
+                            </div>
+                        </div>
+
+                        <div class="time-slot">
+                            <div class="time-label">9:30 PM</div>
+                            <div class="task-card">
+                                <div class="checkbox"></div>
+                                <div class="task-content">
+                                    <h4>Tomorrow's Planning</h4>
+                                    <p>Plan and prepare for tomorrow's tasks</p>
+                                </div>
+                                <div class="priority high"></div>
+                            </div>
+                        </div>
+
+                        <div class="time-slot">
+                            <div class="time-label">10:00 PM</div>
+                            <div class="task-card">
+                                <div class="checkbox"></div>
+                                <div class="task-content">
+                                    <h4>Wind Down</h4>
+                                    <p>Meditation and preparation for sleep</p>
+                                </div>
+                                <div class="priority medium"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Side Panel -->
+                <aside class="side-panel">
+                    <!-- Quick Add Task -->
+                    <div class="quick-add-card">
+                        <h3><i class="fas fa-plus"></i> Quick Add</h3>
+                        <div class="input-group">
+                            <input type="text" placeholder="Add new task..." readonly>
+                            <button class="add-btn"><i class="fas fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="notes-card">
+                        <h3><i class="fas fa-sticky-note"></i> Notes</h3>
+                        <div class="note-item">
+                            <p><strong>Remember:</strong> Call dentist for appointment</p>
+                        </div>
+                        <div class="note-item">
+                            <p><strong>Buy:</strong> Groceries for weekend</p>
+                        </div>
+                        <div class="note-item">
+                            <p><strong>Goal:</strong> Complete 3 main tasks today</p>
+                        </div>
+                    </div>
+
+                    <!-- Weather Widget -->
+                    <div class="weather-card">
+                        <h3><i class="fas fa-cloud-sun"></i> Today's Weather</h3>
+                        <div class="weather-info">
+                            <div class="weather-temp">22°C</div>
+                            <div class="weather-desc">Partly Cloudy</div>
+                            <div class="weather-details">
+                                <span><i class="fas fa-eye"></i> 10km</span>
+                                <span><i class="fas fa-tint"></i> 65%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Chart -->
+                    <div class="progress-card">
+                        <h3><i class="fas fa-chart-pie"></i> Daily Progress</h3>
+                        <div class="progress-ring">
+                            <div class="progress-value">67%</div>
+                        </div>
+                        <p>8 of 12 tasks completed</p>
+                    </div>
+                </aside>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2025 Pry Uchiha. All rights reserved.</p>
+                </div>
+                <div class="footer-right">
+                    <a href="https://github.com/Priyanshu84iya" target="_blank" class="github-btn">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

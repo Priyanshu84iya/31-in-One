@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Newsletter Subscription Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <main class="main-content">
+            <!-- Newsletter Icon -->
+            <div class="newsletter-icon">
+                <i class="fas fa-newspaper"></i>
+            </div>
+            
+            <!-- Headline -->
+            <h1 class="headline">Manage Your Subscriptions</h1>
+            <p class="subtitle">View, modify, and control all your newsletter subscriptions in one place.</p>
+              <!-- Email Input for Subscription Lookup -->
+            <form class="subscription-form" id="subscriptionForm">
+                <div class="input-container">
+                    <i class="fas fa-search input-icon"></i>
+                    <input 
+                        type="email" 
+                        id="emailInput" 
+                        placeholder="Enter your email to view subscriptions" 
+                        required
+                        autocomplete="email"
+                    >
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-text">View Subscriptions</span>
+                        <i class="fas fa-arrow-right btn-icon"></i>
+                    </button>
+                </div>
+            </form>
+            
+            <!-- Subscriptions List -->
+            <div class="subscriptions-container" id="subscriptionsContainer">
+                <div class="subscriptions-header">
+                    <h2>Your Subscriptions</h2>
+                    <div class="user-email" id="userEmail"></div>
+                </div>
+                
+                <div class="subscriptions-list" id="subscriptionsList">
+                    <!-- Sample subscriptions will be populated here -->
+                </div>
+                
+                <div class="subscription-actions">
+                    <button class="action-btn subscribe-new-btn" onclick="showSubscribeModal()">
+                        <i class="fas fa-plus"></i>
+                        Subscribe to New Newsletter
+                    </button>
+                    <button class="action-btn reset-btn" onclick="resetView()">
+                        <i class="fas fa-arrow-left"></i>
+                        Search Different Email
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Subscribe Modal -->
+            <div class="modal-overlay" id="subscribeModal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3>Subscribe to Newsletter</h3>
+                        <button class="close-btn" onclick="closeSubscribeModal()">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="newSubscriptionForm">
+                            <div class="form-group">
+                                <label for="newsletterSelect">Choose Newsletter:</label>
+                                <select id="newsletterSelect" required>
+                                    <option value="">Select a newsletter...</option>
+                                    <option value="tech-weekly">Tech Weekly Digest</option>
+                                    <option value="design-inspiration">Design Inspiration</option>
+                                    <option value="business-insights">Business Insights</option>
+                                    <option value="health-wellness">Health & Wellness</option>
+                                    <option value="startup-news">Startup News</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="frequencySelect">Frequency:</label>
+                                <select id="frequencySelect" required>
+                                    <option value="daily">Daily</option>
+                                    <option value="weekly" selected>Weekly</option>
+                                    <option value="monthly">Monthly</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="modal-submit-btn">
+                                <i class="fas fa-check"></i>
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+              <!-- Features -->
+            <div class="features">
+                <div class="feature">
+                    <i class="fas fa-cog"></i>
+                    <span>Manage Preferences</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-pause-circle"></i>
+                    <span>Pause Anytime</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Privacy Protected</span>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="copyright">
+                    <span>&copy; 2025 Pry Uchiha. All rights reserved.</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Priyanshu84iya" target="_blank" rel="noopener noreferrer" class="github-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

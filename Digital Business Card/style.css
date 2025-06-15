@@ -1,0 +1,711 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    perspective: 1000px;
+    animation: fadeInUp 1s ease-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    padding: 20px 0;
+    animation: fadeIn 1.5s ease-out 1.4s both;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-watermark {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.github-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.github-link i {
+    font-size: 16px;
+}
+
+.github-link span {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.3px;
+}
+
+/* Business Card */
+.business-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 40px 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        0 15px 35px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+}
+
+.business-card:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 
+        0 35px 70px rgba(0, 0, 0, 0.2),
+        0 25px 50px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* Background Decorative Elements */
+.bg-element {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    animation: float 6s ease-in-out infinite;
+}
+
+.bg-element-1 {
+    width: 120px;
+    height: 120px;
+    top: -60px;
+    right: -60px;
+    animation-delay: 0s;
+}
+
+.bg-element-2 {
+    width: 80px;
+    height: 80px;
+    bottom: -40px;
+    left: -40px;
+    animation-delay: 2s;
+}
+
+.bg-element-3 {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    right: -30px;
+    animation-delay: 4s;
+}
+
+/* Profile Photo */
+.profile-photo {
+    position: relative;
+    margin: 0 auto 25px;
+    width: 120px;
+    height: 120px;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.photo-ring {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #667eea, #764ba2, #667eea);
+    background-size: 300% 300%;
+    animation: gradientRotate 3s ease infinite;
+    z-index: 1;
+}
+
+.profile-photo:hover img {
+    transform: scale(1.05);
+}
+
+/* Text Elements */
+.name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: slideInLeft 0.8s ease-out 0.2s both;
+    letter-spacing: -0.5px;
+}
+
+.job-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #718096;
+    margin-bottom: 8px;
+    animation: slideInRight 0.8s ease-out 0.4s both;
+    letter-spacing: 0.5px;
+}
+
+.title-accent {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    margin: 0 auto 20px;
+    border-radius: 2px;
+    animation: slideInUp 0.8s ease-out 0.5s both;
+}
+
+.bio {
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-out 0.6s both;
+}
+
+.bio p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #4a5568;
+    text-align: left;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Skills Highlight */
+.skills-highlight {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 25px;
+    animation: slideInUp 0.8s ease-out 0.7s both;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    color: #667eea;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    transition: all 0.3s ease;
+    letter-spacing: 0.3px;
+}
+
+.skill-tag:hover {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+/* Contact Info */
+.contact-info {
+    margin-bottom: 25px;
+    animation: slideInUp 0.8s ease-out 0.8s both;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #4a5568;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-weight: 400;
+}
+
+.contact-item:hover {
+    background: rgba(102, 126, 234, 0.05);
+    color: #667eea;
+    transform: translateX(5px);
+}
+
+.contact-item i {
+    width: 18px;
+    margin-right: 12px;
+    color: #667eea;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.contact-item span {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    animation: slideInUp 0.8s ease-out 1s both;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.social-link:hover::before {
+    transform: translateX(100%);
+}
+
+.social-link.linkedin { background: linear-gradient(135deg, #0077b5, #005885); }
+.social-link.github { background: linear-gradient(135deg, #333, #24292e); }
+.social-link.twitter { background: linear-gradient(135deg, #1da1f2, #0d8bd9); }
+.social-link.instagram { background: linear-gradient(135deg, #e4405f, #c13584, #833ab4); }
+.social-link.website { background: linear-gradient(135deg, #667eea, #764ba2); }
+
+.social-link:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.social-link i {
+    font-size: 18px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: slideInUp 0.8s ease-out 1.2s both;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
+
+@keyframes gradientRotate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+    }
+    
+    .container {
+        gap: 20px;
+    }
+    
+    .business-card {
+        padding: 30px 20px;
+        max-width: 350px;
+        border-radius: 25px;
+    }
+    
+    .footer {
+        padding: 15px 0;
+    }
+    
+    .footer-content {
+        gap: 20px;
+        flex-direction: column;
+    }
+    
+    .footer-watermark {
+        font-size: 12px;
+    }
+    
+    .github-link {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    
+    .github-link i {
+        font-size: 14px;
+    }
+    
+    .name {
+        font-size: 24px;
+        letter-spacing: -0.3px;
+    }
+    
+    .job-title {
+        font-size: 14px;
+    }
+    
+    .bio p {
+        font-size: 13px;
+        line-height: 1.6;
+    }
+    
+    .skills-highlight {
+        gap: 6px;
+        margin-bottom: 20px;
+    }
+    
+    .skill-tag {
+        font-size: 11px;
+        padding: 5px 10px;
+    }
+    
+    .contact-item {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    
+    .social-links {
+        gap: 12px;
+    }
+    
+    .social-link {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .social-link i {
+        font-size: 16px;
+    }
+    
+    .action-buttons {
+        gap: 10px;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        gap: 15px;
+    }
+    
+    .business-card {
+        padding: 25px 15px;
+        max-width: 320px;
+    }
+    
+    .footer {
+        padding: 12px 0;
+    }
+    
+    .footer-content {
+        gap: 15px;
+    }
+    
+    .footer-watermark {
+        font-size: 11px;
+    }
+    
+    .github-link {
+        padding: 6px 14px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+    
+    .github-link i {
+        font-size: 13px;
+    }
+    
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+    
+    .name {
+        font-size: 22px;
+        margin-bottom: 4px;
+        letter-spacing: -0.2px;
+    }
+    
+    .job-title {
+        font-size: 13px;
+        margin-bottom: 6px;
+    }
+    
+    .title-accent {
+        width: 50px;
+        margin-bottom: 15px;
+    }
+    
+    .bio {
+        margin-bottom: 15px;
+    }
+    
+    .bio p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+    
+    .skills-highlight {
+        margin-bottom: 20px;
+        gap: 5px;
+    }
+    
+    .skill-tag {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+    
+    .contact-info {
+        margin-bottom: 20px;
+    }
+    
+    .contact-item {
+        padding: 5px 8px;
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+    
+    .social-links {
+        margin-bottom: 25px;
+        gap: 10px;
+    }
+    
+    .social-link {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .social-link i {
+        font-size: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    
+    .business-card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        background: white;
+    }
+    
+    .bg-element {
+        display: none;
+    }
+    
+    .action-buttons {
+        display: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .business-card {
+        border: 2px solid #000;
+    }
+    
+    .name {
+        -webkit-text-fill-color: #000;
+        color: #000;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .business-card:hover {
+        transform: none;
+    }
+}

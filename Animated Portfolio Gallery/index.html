@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Portfolio Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header__title">Portfolio Gallery</h1>
+            <p class="header__subtitle">Discover amazing projects and creative works</p>
+        </div>
+    </header>
+
+    <nav class="filter-nav">
+        <div class="container">
+            <input type="radio" id="all" name="filter" class="filter-input" checked>
+            <label for="all" class="filter-label">All</label>
+
+            <input type="radio" id="web" name="filter" class="filter-input">
+            <label for="web" class="filter-label">Web Design</label>
+
+            <input type="radio" id="mobile" name="filter" class="filter-input">
+            <label for="mobile" class="filter-label">Mobile Apps</label>
+
+            <input type="radio" id="branding" name="filter" class="filter-input">
+            <label for="branding" class="filter-label">Branding</label>
+
+            <input type="radio" id="photography" name="filter" class="filter-input">
+            <label for="photography" class="filter-label">Photography</label>
+        </div>
+    </nav>
+
+    <main class="gallery">
+        <div class="container">
+            <div class="gallery__grid">
+                <!-- Web Design Projects -->
+                <div class="portfolio-card web">
+                    <div class="card__image">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop" alt="E-commerce Website">
+                        <div class="card__overlay">
+                            <h3 class="card__title">E-commerce Platform</h3>
+                            <p class="card__description">Modern responsive e-commerce website with clean design</p>
+                            <div class="card__tags">
+                                <span class="tag">HTML5</span>
+                                <span class="tag">CSS3</span>
+                                <span class="tag">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card web">
+                    <div class="card__image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop" alt="Business Website">
+                        <div class="card__overlay">
+                            <h3 class="card__title">Corporate Website</h3>
+                            <p class="card__description">Professional business website with modern animations</p>
+                            <div class="card__tags">
+                                <span class="tag">CSS Grid</span>
+                                <span class="tag">Flexbox</span>
+                                <span class="tag">Animations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card web">
+                    <div class="card__image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&h=300&fit=crop" alt="Portfolio Website">
+                        <div class="card__overlay">
+                            <h3 class="card__title">Creative Portfolio</h3>
+                            <p class="card__description">Artist portfolio with interactive gallery</p>
+                            <div class="card__tags">
+                                <span class="tag">Creative</span>
+                                <span class="tag">Interactive</span>
+                                <span class="tag">Gallery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile App Projects -->
+                <div class="portfolio-card mobile">
+                    <div class="card__image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=300&fit=crop" alt="Fitness App">
+                        <div class="card__overlay">
+                            <h3 class="card__title">Fitness Tracker App</h3>
+                            <p class="card__description">iOS app for tracking workouts and health metrics</p>
+                            <div class="card__tags">
+                                <span class="tag">iOS</span>
+                                <span class="tag">Health</span>
+                                <span class="tag">Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card mobile">
+                    <div class="card__image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=500&h=300&fit=crop" alt="Food App">
+                        <div class="card__overlay">
+                            <h3 class="card__title">Food Delivery App</h3>
+                            <p class="card__description">Cross-platform app for food ordering and delivery</p>
+                            <div class="card__tags">
+                                <span class="tag">React Native</span>
+                                <span class="tag">Food</span>
+                                <span class="tag">Delivery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card mobile">
+                    <div class="card__image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop" alt="Travel App">
+                        <div class="card__overlay">
+                            <h3 class="card__title">Travel Planner</h3>
+                            <p class="card__description">Mobile app for planning and booking travel</p>
+                            <div class="card__tags">
+                                <span class="tag">Travel</span>
+                                <span class="tag">Planning</span>
+                                <span class="tag">Booking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Branding Projects -->
+                <div class="portfolio-card branding">
+                    <div class="card__image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop" alt="Brand Identity">
+                        <div class="card__overlay">
+                            <h3 class="card__title">Tech Startup Branding</h3>
+                            <p class="card__description">Complete brand identity for innovative tech company</p>
+                            <div class="card__tags">
+                                <span class="tag">Logo</span>
+                                <span class="tag">Identity</span>
+                                <span class="tag">Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card branding">
+                    <div class="card__image">
+                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?w=500&h=300&fit=crop" alt="Restaurant Branding">
+                        <div class="card__overlay">
+                            <h3 class="card__title">Restaurant Branding</h3>
+                            <p class="card__description">Modern branding for upscale dining establishment</p>
+                            <div class="card__tags">
+                                <span class="tag">Restaurant</span>
+                                <span class="tag">Luxury</span>
+                                <span class="tag">Modern</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card branding">
+                    <div class="card__image">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&h=300&fit=crop" alt="Fashion Brand">
+                        <div class="card__overlay">
+                            <h3 class="card__title">Fashion Brand Identity</h3>
+                            <p class="card__description">Elegant branding for sustainable fashion brand</p>
+                            <div class="card__tags">
+                                <span class="tag">Fashion</span>
+                                <span class="tag">Sustainable</span>
+                                <span class="tag">Elegant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Photography Projects -->
+                <div class="portfolio-card photography">
+                    <div class="card__image">
+                        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=500&h=300&fit=crop" alt="Wedding Photography">
+                        <div class="card__overlay">
+                            <h3 class="card__title">Wedding Photography</h3>
+                            <p class="card__description">Romantic wedding photography with natural lighting</p>
+                            <div class="card__tags">
+                                <span class="tag">Wedding</span>
+                                <span class="tag">Portrait</span>
+                                <span class="tag">Natural</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card photography">
+                    <div class="card__image">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&h=300&fit=crop" alt="Landscape Photography">
+                        <div class="card__overlay">
+                            <h3 class="card__title">Landscape Series</h3>
+                            <p class="card__description">Breathtaking landscape photography collection</p>
+                            <div class="card__tags">
+                                <span class="tag">Landscape</span>
+                                <span class="tag">Nature</span>
+                                <span class="tag">Fine Art</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-card photography">
+                    <div class="card__image">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&h=300&fit=crop" alt="Street Photography">
+                        <div class="card__overlay">
+                            <h3 class="card__title">Urban Stories</h3>
+                            <p class="card__description">Street photography capturing city life moments</p>
+                            <div class="card__tags">
+                                <span class="tag">Street</span>
+                                <span class="tag">Urban</span>
+                                <span class="tag">Documentary</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__copyright">&copy; 2025 Pry Uchiha. All rights reserved.</p>
+                <div class="footer__links">
+                    <a href="https://github.com/Priyanshu84iya" target="_blank" rel="noopener noreferrer" class="gridfire-btn">
+                        <span class="gridfire-icon">🔥</span>
+                        <span class="gridfire-text">GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <p class="footer__note">Created with HTML & CSS only - No JavaScript required</p>
+        </div>
+    </footer>
+</body>
+</html>

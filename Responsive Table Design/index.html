@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Data Table</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Employee Data Table</h1>
+            <p>A responsive table that transforms into cards on mobile devices</p>
+        </header>
+
+        <div class="table-wrapper">
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Department</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Salary</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-label="ID">001</td>
+                        <td data-label="Name">John Smith</td>
+                        <td data-label="Position">Software Engineer</td>
+                        <td data-label="Department">Technology</td>
+                        <td data-label="Email">john.smith@company.com</td>
+                        <td data-label="Phone">(555) 123-4567</td>
+                        <td data-label="Salary">$75,000</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="ID">002</td>
+                        <td data-label="Name">Sarah Johnson</td>
+                        <td data-label="Position">Product Manager</td>
+                        <td data-label="Department">Product</td>
+                        <td data-label="Email">sarah.johnson@company.com</td>
+                        <td data-label="Phone">(555) 234-5678</td>
+                        <td data-label="Salary">$85,000</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="ID">003</td>
+                        <td data-label="Name">Mike Davis</td>
+                        <td data-label="Position">UX Designer</td>
+                        <td data-label="Department">Design</td>
+                        <td data-label="Email">mike.davis@company.com</td>
+                        <td data-label="Phone">(555) 345-6789</td>
+                        <td data-label="Salary">$70,000</td>
+                        <td data-label="Status"><span class="status inactive">Inactive</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="ID">004</td>
+                        <td data-label="Name">Emily Chen</td>
+                        <td data-label="Position">Data Analyst</td>
+                        <td data-label="Department">Analytics</td>
+                        <td data-label="Email">emily.chen@company.com</td>
+                        <td data-label="Phone">(555) 456-7890</td>
+                        <td data-label="Salary">$65,000</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="ID">005</td>
+                        <td data-label="Name">David Wilson</td>
+                        <td data-label="Position">Marketing Manager</td>
+                        <td data-label="Department">Marketing</td>
+                        <td data-label="Email">david.wilson@company.com</td>
+                        <td data-label="Phone">(555) 567-8901</td>
+                        <td data-label="Salary">$72,000</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="ID">006</td>
+                        <td data-label="Name">Lisa Anderson</td>
+                        <td data-label="Position">HR Specialist</td>
+                        <td data-label="Department">Human Resources</td>
+                        <td data-label="Email">lisa.anderson@company.com</td>
+                        <td data-label="Phone">(555) 678-9012</td>
+                        <td data-label="Salary">$58,000</td>
+                        <td data-label="Status"><span class="status pending">Pending</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="ID">007</td>
+                        <td data-label="Name">Robert Taylor</td>
+                        <td data-label="Position">Sales Manager</td>
+                        <td data-label="Department">Sales</td>
+                        <td data-label="Email">robert.taylor@company.com</td>
+                        <td data-label="Phone">(555) 789-0123</td>
+                        <td data-label="Salary">$80,000</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                    </tr>
+                    <tr>
+                        <td data-label="ID">008</td>
+                        <td data-label="Name">Jennifer Lee</td>
+                        <td data-label="Position">Financial Analyst</td>
+                        <td data-label="Department">Finance</td>
+                        <td data-label="Email">jennifer.lee@company.com</td>
+                        <td data-label="Phone">(555) 890-1234</td>
+                        <td data-label="Salary">$68,000</td>
+                        <td data-label="Status"><span class="status active">Active</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="copyright">
+                    <p>&copy; 2025 Pry Uchiha. All rights reserved.</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/Priyanshu84iya" target="_blank" rel="noopener noreferrer" class="github-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Pry Uchiha</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-sun sun-icon"></i>
+        <i class="fas fa-moon moon-icon"></i>
+    </button>
+
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1 class="title">Something Amazing is Coming Soon</h1>
+            <p class="description">
+                We're working hard to bring you an incredible experience. 
+                Stay tuned for something extraordinary that will revolutionize your digital journey.
+            </p>
+        </header>
+
+    <!-- Countdown Section -->
+        <section class="countdown-section">
+            <h2 class="countdown-title">Launch Countdown</h2>
+            <div class="countdown-container">
+                <div class="countdown-item" id="days-container">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item" id="hours-container">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item" id="minutes-container">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item" id="seconds-container">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Email Subscription Section -->
+        <section class="subscription-section">
+            <h3 class="subscription-title">Be the First to Know</h3>
+            <p class="subscription-description">Get notified when we launch and receive exclusive updates!</p>
+            <form class="subscription-form">
+                <div class="input-group">
+                    <input 
+                        type="email" 
+                        placeholder="Enter your email address" 
+                        class="email-input" 
+                        required
+                    >
+                    <button type="submit" class="subscribe-btn">
+                        <span>Notify Me</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="copyright">
+                <span>© 2025 Pry Uchiha. All rights reserved.</span>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Priyanshu84iya" target="_blank" class="github-link">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </footer>    <script>
+        function toggleTheme() {
+            const body = document.body;
+            if (body.classList.contains('dark-theme')) {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+            } else {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+            }
+        }
+
+        // Countdown functionality
+        const countdownDate = new Date("September 15, 2025 00:00:00").getTime();
+
+        // Update the countdown every second
+        const countdownTimer = setInterval(function() {
+            // Get current date and time
+            const now = new Date().getTime();
+            
+            // Find the time remaining between now and the countdown date
+            const timeRemaining = countdownDate - now;
+            
+            // Calculate days, hours, minutes and seconds
+            const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+            
+            // Format with leading zeros
+            document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+            
+            // Add animation effect
+            document.getElementById("seconds-container").classList.add("pulse");
+            setTimeout(function() {
+                document.getElementById("seconds-container").classList.remove("pulse");
+            }, 500);
+            
+            // If the countdown is over
+            if (timeRemaining < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("days").innerHTML = "00";
+                document.getElementById("hours").innerHTML = "00";
+                document.getElementById("minutes").innerHTML = "00";
+                document.getElementById("seconds").innerHTML = "00";
+                document.querySelector(".countdown-title").innerHTML = "We're Live!";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,690 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Confetti Animation */
+.confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff6b6b;
+    animation: confetti-fall 3s linear infinite;
+}
+
+.confetti:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    background: #ff6b6b;
+}
+
+.confetti:nth-child(2) {
+    left: 20%;
+    animation-delay: 0.5s;
+    background: #4ecdc4;
+}
+
+.confetti:nth-child(3) {
+    left: 30%;
+    animation-delay: 1s;
+    background: #45b7d1;
+}
+
+.confetti:nth-child(4) {
+    left: 40%;
+    animation-delay: 1.5s;
+    background: #f9ca24;
+}
+
+.confetti:nth-child(5) {
+    left: 50%;
+    animation-delay: 2s;
+    background: #f0932b;
+}
+
+.confetti:nth-child(6) {
+    left: 60%;
+    animation-delay: 0.3s;
+    background: #eb4d4b;
+}
+
+.confetti:nth-child(7) {
+    left: 70%;
+    animation-delay: 0.8s;
+    background: #6c5ce7;
+}
+
+.confetti:nth-child(8) {
+    left: 80%;
+    animation-delay: 1.3s;
+    background: #a29bfe;
+}
+
+.confetti:nth-child(9) {
+    left: 90%;
+    animation-delay: 1.8s;
+    background: #fd79a8;
+}
+
+.confetti:nth-child(10) {
+    left: 15%;
+    animation-delay: 2.3s;
+    background: #00b894;
+}
+
+.confetti:nth-child(11) {
+    left: 25%;
+    animation-delay: 0.2s;
+    background: #e17055;
+}
+
+.confetti:nth-child(12) {
+    left: 35%;
+    animation-delay: 0.7s;
+    background: #fdcb6e;
+}
+
+.confetti:nth-child(13) {
+    left: 45%;
+    animation-delay: 1.2s;
+    background: #e84393;
+}
+
+.confetti:nth-child(14) {
+    left: 55%;
+    animation-delay: 1.7s;
+    background: #00cec9;
+}
+
+.confetti:nth-child(15) {
+    left: 65%;
+    animation-delay: 2.2s;
+    background: #55a3ff;
+}
+
+.confetti:nth-child(16) {
+    left: 75%;
+    animation-delay: 0.4s;
+    background: #ff7675;
+}
+
+.confetti:nth-child(17) {
+    left: 85%;
+    animation-delay: 0.9s;
+    background: #74b9ff;
+}
+
+.confetti:nth-child(18) {
+    left: 95%;
+    animation-delay: 1.4s;
+    background: #fd79a8;
+}
+
+.confetti:nth-child(19) {
+    left: 5%;
+    animation-delay: 1.9s;
+    background: #fdcb6e;
+}
+
+.confetti:nth-child(20) {
+    left: 12%;
+    animation-delay: 2.4s;
+    background: #6c5ce7;
+}
+
+@keyframes confetti-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* Main Birthday Card */
+.birthday-card {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Header Styles */
+.birthday-header {
+    margin-bottom: 3rem;
+    animation: slideInFromTop 1s ease-out;
+}
+
+.birthday-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.6),
+        0 0 30px rgba(255, 255, 255, 0.4),
+        0 0 40px rgba(255, 255, 255, 0.2);
+    animation: glow-pulse 2s ease-in-out infinite alternate;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #f8f9fa;
+    font-weight: 300;
+    animation: fadeInUp 1.5s ease-out;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Container */
+.image-container {
+    margin: 3rem 0;
+    animation: bounceIn 1.5s ease-out;
+}
+
+.birthday-image {
+    position: relative;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    padding: 3rem;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    animation: float 3s ease-in-out infinite;
+}
+
+.cake-emoji {
+    font-size: 6rem;
+    animation: spin-slow 4s linear infinite;
+}
+
+.balloon-container {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+}
+
+.balloon {
+    font-size: 2rem;
+    animation: balloon-float 3s ease-in-out infinite;
+}
+
+.balloon-1 {
+    animation-delay: 0s;
+}
+
+.balloon-2 {
+    animation-delay: 1s;
+}
+
+.balloon-3 {
+    animation-delay: 2s;
+}
+
+/* Message Container */
+.message-container {
+    margin: 3rem 0;
+    animation: fadeInUp 2s ease-out;
+}
+
+.birthday-message {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.main-message {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #f8f9fa;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.sub-message {
+    font-size: 1.1rem;
+    color: #e9ecef;
+    font-style: italic;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Gift Section */
+.gift-section {
+    margin: 3rem 0;
+    animation: slideInFromBottom 2.5s ease-out;
+}
+
+.gift-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff6b6b, #ee5a6f);
+    color: white;
+    text-decoration: none;
+    padding: 1.2rem 3rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 50px;
+    box-shadow: 
+        0 8px 25px rgba(255, 107, 107, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gift-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 
+        0 15px 35px rgba(255, 107, 107, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.3);
+    background: linear-gradient(45deg, #ee5a6f, #ff6b6b);
+}
+
+.gift-button:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* Surprise Container */
+.surprise-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.surprise-container:target {
+    opacity: 1;
+    visibility: visible;
+    animation: surpriseReveal 0.5s ease-out;
+}
+
+.surprise-content {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    animation: surprisePopIn 0.6s ease-out;
+    position: relative;
+}
+
+.surprise-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.8),
+        0 0 20px rgba(255, 255, 255, 0.6);
+    animation: glow-pulse 2s ease-in-out infinite alternate;
+}
+
+.surprise-message {
+    color: #f8f9fa;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.surprise-message p {
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.special-wish {
+    font-weight: 600;
+    font-size: 1.3rem !important;
+    color: #fff !important;
+    text-shadow: 
+        0 0 10px rgba(255, 255, 255, 0.6) !important;
+}
+
+.surprise-decorations {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.star, .heart {
+    font-size: 2rem;
+    animation: twinkle 1.5s ease-in-out infinite alternate;
+}
+
+.star:nth-child(odd) {
+    animation-delay: 0.5s;
+}
+
+.heart:nth-child(even) {
+    animation-delay: 1s;
+}
+
+.close-surprise {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.close-surprise:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    z-index: 3;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.copyright {
+    color: #f8f9fa;
+    font-size: 0.9rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #f8f9fa;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.github-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.github-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Animations */
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes glow-pulse {
+    from {
+        text-shadow: 
+            0 0 10px rgba(255, 255, 255, 0.8),
+            0 0 20px rgba(255, 255, 255, 0.6),
+            0 0 30px rgba(255, 255, 255, 0.4);
+    }
+    to {
+        text-shadow: 
+            0 0 20px rgba(255, 255, 255, 1),
+            0 0 30px rgba(255, 255, 255, 0.8),
+            0 0 40px rgba(255, 255, 255, 0.6);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes balloon-float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.7;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes surpriseReveal {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: blur(10px);
+    }
+}
+
+@keyframes surprisePopIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.7) translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .birthday-card {
+        padding: 1rem;
+    }
+    
+    .birthday-title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .cake-emoji {
+        font-size: 4rem;
+    }
+    
+    .birthday-image {
+        padding: 2rem;
+    }
+    
+    .birthday-message {
+        padding: 1.5rem;
+    }
+    
+    .main-message {
+        font-size: 1.1rem;
+    }
+    
+    .gift-button {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+    
+    .surprise-content {
+        margin: 1rem;
+        padding: 2rem;
+    }
+    
+    .surprise-title {
+        font-size: 2.5rem;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .birthday-title {
+        font-size: 2rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .cake-emoji {
+        font-size: 3rem;
+    }
+    
+    .balloon-container {
+        gap: 0.5rem;
+    }
+    
+    .balloon {
+        font-size: 1.5rem;
+    }
+    
+    .surprise-title {
+        font-size: 2rem;
+    }
+    
+    .surprise-message {
+        font-size: 1rem;
+    }
+}

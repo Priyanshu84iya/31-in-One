@@ -1,0 +1,368 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.header h1 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+}
+
+/* Table Wrapper */
+.table-wrapper {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 30px;
+    flex: 1;
+}
+
+/* Desktop Table Styles */
+.responsive-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.responsive-table thead {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.responsive-table th {
+    padding: 15px 12px;
+    text-align: left;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 12px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.responsive-table tbody tr {
+    transition: all 0.3s ease;
+    border-bottom: 1px solid #eee;
+}
+
+/* Alternating Row Colors */
+.responsive-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.responsive-table tbody tr:nth-child(odd) {
+    background-color: white;
+}
+
+/* Hover Effect */
+.responsive-table tbody tr:hover {
+    background-color: #e3f2fd !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-table td {
+    padding: 15px 12px;
+    vertical-align: middle;
+    border-bottom: 1px solid #eee;
+}
+
+/* Status Badges */
+.status {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status.active {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.status.inactive {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.status.pending {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+/* Footer Styles */
+.footer {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.copyright p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.github-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.github-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.github-link i {
+    font-size: 18px;
+}
+
+.github-link span {
+    font-weight: 500;
+}
+
+/* Hide data labels on desktop */
+.responsive-table td::before {
+    display: none;
+}
+
+/* Mobile Styles - Media Query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    /* Hide table header on mobile */
+    .responsive-table thead {
+        display: none;
+    }
+
+    /* Transform table rows into cards */
+    .responsive-table tbody tr {
+        display: block;
+        background: white;
+        border-radius: 12px;
+        margin-bottom: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid #e0e0e0;
+        transition: all 0.3s ease;
+    }
+
+    .responsive-table tbody tr:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        background: white !important;
+    }
+
+    /* Remove alternating colors on mobile - all cards are white */
+    .responsive-table tbody tr:nth-child(even),
+    .responsive-table tbody tr:nth-child(odd) {
+        background: white;
+    }
+
+    /* Transform table cells into card content */
+    .responsive-table td {
+        display: block;
+        padding: 8px 0;
+        border: none;
+        text-align: left;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+        padding-left: 40%;
+    }
+
+    .responsive-table td:last-child {
+        border-bottom: none;
+    }
+
+    /* Show data labels as card field names */
+    .responsive-table td::before {
+        content: attr(data-label) ": ";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        font-weight: 600;
+        color: #555;
+        text-transform: uppercase;
+        font-size: 11px;
+        letter-spacing: 0.5px;
+        width: 35%;
+        display: block;
+    }
+
+    /* Adjust status badges for mobile */
+    .status {
+        display: inline-block;
+        margin-top: 2px;
+    }
+
+    /* Footer adjustments for mobile */
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .github-link {
+        padding: 12px 24px;
+    }
+}
+
+/* Tablet Styles - Media Query for screens between 768px and 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .responsive-table {
+        font-size: 13px;
+    }
+
+    .responsive-table th,
+    .responsive-table td {
+        padding: 12px 8px;
+    }
+
+    .header h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Small Mobile Styles - Media Query for screens smaller than 480px */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .header {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+
+    .header h1 {
+        font-size: 1.8rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+
+    .responsive-table tbody tr {
+        padding: 15px;
+        margin-bottom: 12px;
+    }
+
+    .responsive-table td {
+        padding: 6px 0;
+        padding-left: 45%;
+        font-size: 13px;
+    }
+
+    .responsive-table td::before {
+        width: 40%;
+        font-size: 10px;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+
+    .github-link {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+
+    .header,
+    .footer {
+        background: white !important;
+        color: black !important;
+        border: 1px solid #ccc;
+    }
+
+    .responsive-table {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+
+    .responsive-table th {
+        background: #f5f5f5 !important;
+        color: black !important;
+    }
+
+    .github-link {
+        display: none;
+    }
+}
